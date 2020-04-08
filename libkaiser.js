@@ -24,6 +24,7 @@ String.prototype.reverse = function() { return this.split('').reverse().join('')
 String.prototype.lower = function() { return this.toLowerCase(); };
 String.prototype.toNumber = function() { return Number(this); };
 String.prototype.asTime = function() { return Number(this).asTime(); };
+String.prototype.stripAll = function() {return this.replace(/(\r\n\t|\n|\r\t)/gm,"");};
 
 Number.prototype.zp = function(n) { return this.toString().zp(n); };
 Number.prototype.truncate = function(n){return Math.round(this * Math.pow(10, n)) / Math.pow(10, n);};
